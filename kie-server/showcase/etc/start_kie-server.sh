@@ -14,7 +14,7 @@ if [ -n "$KIE_WB_PORT_8080_TCP" ] &&  [ -n "$KIE_WB_ENV_KIE_CONTEXT_PATH" ] &&  
     echo "Detected successfull KIE Workbench container linked. Applying automatic configuration for the linked containers..."
     export KIE_SERVER_LOCATION="http://$DOCKER_IP:8080/$KIE_CONTEXT_PATH/services/rest/server"
     export KIE_SERVER_CONTROLLER="http://$KIE_WB_PORT_8080_TCP_ADDR:8080/$KIE_WB_ENV_KIE_CONTEXT_PATH/rest/controller"
-    export KIE_MAVEN_REPO="http://$KIE_WB_PORT_8080_TCP_ADDR:8080/$KIE_WB_ENV_KIE_CONTEXT_PATH/maven2wb"
+    export KIE_MAVEN_REPO="http://$KIE_WB_PORT_8080_TCP_ADDR:8080/$KIE_WB_ENV_KIE_CONTEXT_PATH/maven2"
 fi
 
 # Default arguments for running the KIE Execution server.
