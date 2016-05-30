@@ -35,6 +35,9 @@ chown jboss:jboss $JBOSS_HOME/standalone/configuration/kie-server-users.properti
 chown jboss:jboss $JBOSS_HOME/standalone/configuration/kie-server-roles.properties && \
 chown jboss:jboss $JBOSS_HOME/bin/start_kie-server.sh && \
 chown jboss:jboss $JBOSS_HOME/../.m2/settings.xml
+RUN yum update -y && \
+yum install -y iproute && \
+yum clean all
 
 ####### JBOSS USER ############
 # Switchback to jboss user
